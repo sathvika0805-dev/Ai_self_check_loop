@@ -1,6 +1,6 @@
 # Self-Correcting AI Entity Extraction & Validation Pipeline
 
-An Applied AI Engineering solution implementing a two-pass architecture to extract structured financial data from conversational text and perform deterministic arithmetic validation.
+An Applied AI Engineering solution implementing a two-pass architecture to extract structured financial data from conversational text, perform deterministic arithmetic validation, and render an interactive Streamlit dashboard.
 
 ## Architecture
 
@@ -12,12 +12,17 @@ An Applied AI Engineering solution implementing a two-pass architecture to extra
    - Mathematically verifies line item totals ($qty \times price$) and calculates grand totals.
    - Flags discrepancies, logs error types, and applies automated self-corrections without overwriting historical draft metadata.
 
+3. **Pass 3: Web Dashboard (Streamlit UI)**
+   - Renders interactive metric cards, real-time error alerts, inspection controls, and full audit logs on a web interface.
+
 ## Pipeline Outputs
 
-- Executable code: `main.py`
-- Structured output audit trail: `results.json` (covers 6 comprehensive test cases demonstrating clean passes and self-corrections)
+- **Streamlit Web Dashboard:** `http://localhost:8501`
+- **Executable Application:** `main.py`
+- **Structured Audit Trail:** `results.json` (covers 6 standardized test cases demonstrating clean passes and self-corrections)
 
 ## Setup & Running
 
+1. Install dependencies:
 ```bash
-python main.py
+pip install streamlit
