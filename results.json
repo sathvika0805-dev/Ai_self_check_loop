@@ -1,0 +1,235 @@
+[
+  {
+    "input_text": "Invoice for 2 Office Chairs at 150 each. Total is 300.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "Office Chairs",
+          "qty": 2,
+          "unit_price": 150.0,
+          "line_total": 300.0
+        }
+      ],
+      "total": 300.0
+    },
+    "pass_2_check": {
+      "flagged": false,
+      "failure_type": null,
+      "details": []
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "Office Chairs",
+          "qty": 2,
+          "unit_price": 150.0,
+          "line_total": 300.0
+        }
+      ],
+      "total": 300.0
+    }
+  },
+  {
+    "input_text": "Purchased 3 Notebooks at 4.50 each and 1 Pen at 2.00. Grand total is 15.50.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "Notebooks",
+          "qty": 3,
+          "unit_price": 4.5,
+          "line_total": 13.5
+        },
+        {
+          "name": "Pen",
+          "qty": 1,
+          "unit_price": 2.0,
+          "line_total": 2.0
+        }
+      ],
+      "total": 15.5
+    },
+    "pass_2_check": {
+      "flagged": false,
+      "failure_type": null,
+      "details": []
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "Notebooks",
+          "qty": 3,
+          "unit_price": 4.5,
+          "line_total": 13.5
+        },
+        {
+          "name": "Pen",
+          "qty": 1,
+          "unit_price": 2.0,
+          "line_total": 2.0
+        }
+      ],
+      "total": 15.5
+    }
+  },
+  {
+    "input_text": "Order details: 12 USB Drives at $14.50 each ($174.00), plus 4 HDMI Cables at $18.25 each ($75.00). Total invoice amount: $249.00.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "USB Drives",
+          "qty": 12,
+          "unit_price": 14.5,
+          "line_total": 174.0
+        },
+        {
+          "name": "HDMI Cables",
+          "qty": 4,
+          "unit_price": 18.25,
+          "line_total": 75.0
+        }
+      ],
+      "total": 249.0
+    },
+    "pass_2_check": {
+      "flagged": true,
+      "failure_type": "broken_calculation",
+      "details": [
+        "Item 'HDMI Cables' line total incorrect: got 75.0, expected 73.0",
+        "Grand total incorrect: got 249.0, expected 247.0"
+      ]
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "USB Drives",
+          "qty": 12,
+          "unit_price": 14.5,
+          "line_total": 174.0
+        },
+        {
+          "name": "HDMI Cables",
+          "qty": 4,
+          "unit_price": 18.25,
+          "line_total": 73.0
+        }
+      ],
+      "total": 247.0
+    }
+  },
+  {
+    "input_text": "Got 2 packs of markers for 10 total and 3 boxes of clips for 5 each.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "Packs of markers",
+          "qty": 2,
+          "unit_price": 5.0,
+          "line_total": 10.0
+        },
+        {
+          "name": "Boxes of clips",
+          "qty": 3,
+          "unit_price": 5.0,
+          "line_total": 15.0
+        }
+      ],
+      "total": 25.0
+    },
+    "pass_2_check": {
+      "flagged": false,
+      "failure_type": null,
+      "details": []
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "Packs of markers",
+          "qty": 2,
+          "unit_price": 5.0,
+          "line_total": 10.0
+        },
+        {
+          "name": "Boxes of clips",
+          "qty": 3,
+          "unit_price": 5.0,
+          "line_total": 15.0
+        }
+      ],
+      "total": 25.0
+    }
+  },
+  {
+    "input_text": "Bought 2 keyboards at $50.00 each ($100.00) and 1 mouse at $25.00 ($25.00). Total is $130.00.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "Keyboards",
+          "qty": 2,
+          "unit_price": 50.0,
+          "line_total": 100.0
+        },
+        {
+          "name": "Mouse",
+          "qty": 1,
+          "unit_price": 25.0,
+          "line_total": 25.0
+        }
+      ],
+      "total": 130.0
+    },
+    "pass_2_check": {
+      "flagged": true,
+      "failure_type": "broken_calculation",
+      "details": [
+        "Grand total incorrect: got 130.0, expected 125.0"
+      ]
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "Keyboards",
+          "qty": 2,
+          "unit_price": 50.0,
+          "line_total": 100.0
+        },
+        {
+          "name": "Mouse",
+          "qty": 1,
+          "unit_price": 25.0,
+          "line_total": 25.0
+        }
+      ],
+      "total": 125.0
+    }
+  },
+  {
+    "input_text": "Purchased 1 software license for $49.99. Total: $49.99.",
+    "pass_1_draft": {
+      "items": [
+        {
+          "name": "Software License",
+          "qty": 1,
+          "unit_price": 49.99,
+          "line_total": 49.99
+        }
+      ],
+      "total": 49.99
+    },
+    "pass_2_check": {
+      "flagged": false,
+      "failure_type": null,
+      "details": []
+    },
+    "final_output": {
+      "items": [
+        {
+          "name": "Software License",
+          "qty": 1,
+          "unit_price": 49.99,
+          "line_total": 49.99
+        }
+      ],
+      "total": 49.99
+    }
+  }
+]
